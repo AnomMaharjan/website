@@ -12479,6 +12479,7 @@ pre .code {
 
 .social-icons {
   list-style-type: none;
+
   padding-left: 0;
   display: -webkit-box;
   display: -webkit-flex;
