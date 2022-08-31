@@ -178,11 +178,14 @@ $(function () {
 // google maps
 function initMap() {
   // Styles a map in night mode.
+  loc = { lat: 27.725231662651627, lng: 85.28874298180564 };
+
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: { lat: 40.674, lng: -73.945 },
-    zoom: 12,
-    scrollwheel: false,
-    navigationControl: false,
+    center: loc,
+
+    zoom: 16,
+    scrollwheel: true,
+    navigationControl: true,
     mapTypeControl: false,
     scaleControl: false,
     styles: [
@@ -265,5 +268,9 @@ function initMap() {
         stylers: [{ color: '#17263c' }]
       }
     ]
+  });
+  const marker = new google.maps.Marker({
+    position: loc,
+    map: map,
   });
 }
