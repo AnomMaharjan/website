@@ -11,7 +11,6 @@
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
-
 // smooth scroll
 $(document).ready(function () {
   $(".navbar .nav-link").on('click', function (event) {
@@ -272,5 +271,27 @@ function initMap() {
   const marker = new google.maps.Marker({
     position: loc,
     map: map,
+  });
+}
+
+function send(event) {
+  console.log("sentttttttt");
+  event.preventDefault();
+  Email.send({
+    SecureToken: "9f9745e2-53ff-4e9e-97cb-db771b10919c",
+    To: 'anmmzn1@gmail.com',
+    From: 'anmmzn1@gmail.com',
+    Subject: document.getElementById('subject').value,
+    Body: document.getElementById('emailBody').value
+  }).then(function (response) {
+    if (response == 'OK') {
+      console.log("sentttttttt");
+
+      alert("Mail sent succeessfully");
+    } else {
+      console.log("faileddddd");
+
+      throw new Error("Error: " + response);
+    }
   });
 }
