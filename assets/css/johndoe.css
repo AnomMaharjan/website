@@ -12164,6 +12164,25 @@ p {
   right: 0;
 }
 
+.hire {
+  outline: none;
+  border-color: white;
+}
+
+.hire:hover {
+  background-color: white;
+  color: #1572A1;
+  border-color: white;
+  outline: none;
+}
+
+.hire:focus {
+  background-color: white;
+  color: #1572A1;
+  border-color: white;
+  outline: none;
+}
+
 .btn-component:hover i {
   -webkit-transform: translateX(10px);
   -ms-transform: translateX(10px);
@@ -12328,6 +12347,10 @@ p {
   backface-visibility: hidden;
 }
 
+/* .portfolio-item:hover {
+  color: #000;
+} */
+
 .portfolio .portfolio-container .portfolio-item .content-holder {
   position: absolute;
   top: 50%;
@@ -12337,7 +12360,9 @@ p {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  background: rgba(248, 92, 112, 0.8);
+  /* background: rgba(248, 92, 112, 0.8); */
+  background: rgba(21, 114, 161, 0.8);
+
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
